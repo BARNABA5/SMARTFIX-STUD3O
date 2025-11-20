@@ -1,0 +1,284 @@
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body {
+    line-height: 1.6;
+    color: #fff;
+    background: #1b0e2a;
+}
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* Navbar */
+header {
+    background: rgba(29, 12, 41, 0.95);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+.logo {
+    font-weight: 700;
+    font-size: 24px;
+    color: #FF6EC7;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+nav ul li a:hover {
+    color: #FF6EC7;
+}
+
+/* Hero */
+.hero {
+    height: 100vh;
+    background: linear-gradient(135deg, #FF6EC7, #7D5FFF);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+.btn {
+    background: #fff;
+    color: #7D5FFF;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+}
+.btn:hover {
+    background: #FF6EC7;
+    color: #fff;
+}
+
+/* About */
+.about {
+    padding: 80px 0;
+    text-align: center;
+}
+.about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #FF6EC7;
+}
+.about p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: auto;
+    color: #ddd;
+}
+
+/* Services */
+.services {
+    padding: 80px 0;
+    text-align: center;
+    background: rgba(29, 12, 41, 0.9);
+}
+.services h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #FF6EC7;
+}
+.service-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.card {
+    background: #2e173c;
+    padding: 30px 20px;
+    border-radius: 15px;
+    width: 300px;
+    transition: 0.3s;
+}
+.card h3 {
+    margin-bottom: 15px;
+    color: #FF6EC7;
+}
+.card p {
+    color: #ccc;
+}
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(255,110,199,0.5);
+}
+
+/* Portfolio */
+.portfolio {
+    padding: 80px 0;
+    text-align: center;
+}
+.portfolio h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #FF6EC7;
+}
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.portfolio-item {
+    overflow: hidden;
+    border-radius: 15px;
+}
+.portfolio-item img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s;
+}
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Contact */
+.contact {
+    padding: 80px 0;
+    text-align: center;
+    background: rgba(29, 12, 41, 0.9);
+}
+.contact h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #FF6EC7;
+}
+.contact form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.contact input, .contact textarea {
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+.contact input::placeholder, .contact textarea::placeholder {
+    color: #999;
+}
+.contact button {
+    width: fit-content;
+    align-self: center;
+}
+
+/* Footer */
+footer {
+    padding: 20px 0;
+    text-align: center;
+    background: #1b0e2a;
+    color: #ccc;
+}
+
+/* Responsive */
+@media(max-width: 768px){
+    .service-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+/* Hero animations */
+.hero-content {
+    position: relative;
+    overflow: hidden;
+}
+.hero-title, .hero-subtitle {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s forwards;
+}
+.hero-title {
+    animation-delay: 0.3s;
+}
+.hero-subtitle {
+    animation-delay: 0.6s;
+}
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hero floating animation background */
+.hero-animation {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 110, 199, 0.2);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    animation: float 6s ease-in-out infinite;
+    z-index: 0;
+}
+@keyframes float {
+    0% { transform: translate(-50%, -50%) translateY(0); }
+    50% { transform: translate(-50%, -50%) translateY(-30px); }
+    100% { transform: translate(-50%, -50%) translateY(0); }
+}
+
+/* Service & portfolio fade-in */
+.card, .portfolio-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+.card.visible, .portfolio-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Contact form success message */
+.form-message {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #7DFFB5; /* soft green */
+    font-weight: 600;
+    display: none;
+    text-align: center;
+}
+/* Portfolio audio player styling */
+.portfolio-item audio {
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 10px;
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartFix Studio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">SmartFix Studio</div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">We Bring Ideas to Life</h1>
+            <p class="hero-subtitle">System Development | Poster Designs | Music & Audio Production</p>
+            <a href="#contact" class="btn">Get in Touch</a>
+            <div class="hero-animation"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About SmartFix Studio</h2>
+            <p>At SmartFix Studio, we combine creativity and technology to deliver high-quality systems, stunning poster designs, and captivating audio experiences. Our goal is to bring your ideas to life with professionalism and style.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-cards">
+                <div class="card">
+                    <h3>System Development</h3>
+                    <p>Custom software solutions tailored for your business needs.</p>
+                </div>
+                <div class="card">
+                    <h3>Poster Designs</h3>
+                    <p>Creative and visually striking posters for advertising and branding.</p>
+                </div>
+                <div class="card">
+                    <h3>Music & Audio</h3>
+                    <p>High-quality music production, voiceovers, and audio editing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2>Our Portfolio</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="images/portfolio1.jpg" alt="Project 1">
+                    <audio controls>
+                        <source src="audio/123.m4a" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/portfolio2.jpg" alt="Project 2">
+                    <audio controls>
+                        <source src="audio/sample2.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/portfolio3.jpg" alt="Project 3">
+                    <audio controls>
+                        <source src="audio/sample3.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/portfolio4.jpg" alt="Project 4">
+                    <audio controls>
+                        <source src="audio/sample4.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+            <div id="formMessage" class="form-message"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 SmartFix Studio. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
