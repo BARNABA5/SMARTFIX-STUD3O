@@ -50,9 +50,12 @@ nav ul li a:hover {
 }
 
 /* Hero */
+Hero *
 .hero {
     height: 100vh;
-    background: linear-gradient(135deg, #FF6EC7, #7D5FFF);
+    background-image: URL("images/123.jpg");
+    background-size: cover;
+    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -282,3 +285,4 @@ footer {
     margin-top: 10px;
     border-radius: 10px;
 }
+
